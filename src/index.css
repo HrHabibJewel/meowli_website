@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm, playful color palette for Meowli */
+    --background: 30 50% 98%;
+    --foreground: 20 30% 20%;
+
+    --card: 30 40% 99%;
+    --card-foreground: 20 30% 20%;
+
+    --popover: 30 40% 99%;
+    --popover-foreground: 20 30% 20%;
+
+    /* Coral/Peach primary */
+    --primary: 15 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 15 90% 75%;
+
+    /* Soft pink secondary */
+    --secondary: 340 60% 92%;
+    --secondary-foreground: 340 50% 35%;
+
+    /* Warm sand muted */
+    --muted: 35 40% 94%;
+    --muted-foreground: 25 20% 50%;
+
+    /* Sky blue accent */
+    --accent: 200 80% 85%;
+    --accent-foreground: 200 70% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 30% 88%;
+    --input: 30 30% 88%;
+    --ring: 15 85% 65%;
+
+    --radius: 1rem;
+
+    /* Custom Meowli colors */
+    --peach: 15 85% 65%;
+    --peach-light: 20 90% 92%;
+    --coral: 10 80% 60%;
+    --blush: 340 60% 88%;
+    --cream: 40 50% 96%;
+    --sky: 200 80% 88%;
+    --sky-deep: 200 70% 75%;
+    --mint: 160 50% 85%;
+    --lavender: 270 50% 90%;
+    --warm-brown: 25 40% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(20 90% 95%) 0%, hsl(340 60% 94%) 50%, hsl(200 80% 94%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(30 50% 98%) 0%, hsl(20 90% 96%) 100%);
+    --gradient-peach: linear-gradient(135deg, hsl(15 85% 65%) 0%, hsl(340 70% 65%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200 80% 88%) 0%, hsl(270 50% 90%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(15 50% 50% / 0.15);
+    --shadow-medium: 0 8px 30px -8px hsl(15 50% 50% / 0.2);
+    --shadow-glow: 0 0 40px hsl(15 85% 65% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-nunito antialiased;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-peach {
+    background: var(--gradient-peach);
+  }
+
+  .gradient-sky {
+    background: var(--gradient-sky);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Paw print animation */
+  .paw-trail {
+    position: absolute;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .paw-trail:nth-child(2) {
+    animation-delay: -2s;
+  }
+
+  .paw-trail:nth-child(3) {
+    animation-delay: -4s;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delay-1 {
+    animation-delay: -1s;
+  }
+
+  .float-delay-2 {
+    animation-delay: -2s;
+  }
+
+  .float-delay-3 {
+    animation-delay: -3s;
+  }
+
+  /* Bounce animation */
+  .bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  /* Wiggle animation */
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  /* Pulse glow */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-peach);
+  }
+
+  .fur-divider {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='20' viewBox='0 0 60 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q15 0 30 10 T60 10' fill='none' stroke='%23F4A79A' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    height: 20px;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(15 85% 65% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(15 85% 65% / 0.5);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
