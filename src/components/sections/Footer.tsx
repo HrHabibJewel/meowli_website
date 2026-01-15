@@ -7,7 +7,8 @@ const footerLinks = [
   { label: 'Terms of Service', href: '/terms' },
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Contact Us', href: '/contact' },
-  { label: 'FAQ', href: '#' },
+  { label: 'Sitemap', href: '/sitemap.xml' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 const socialLinks = [
@@ -29,8 +30,11 @@ export const Footer = () => {
           
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 mb-8">
-            {footerLinks.map((link) => (
-              link.href.startsWith('/') ? (
+            {footerLinks.map((link) => {
+              const isStaticFile = link.href.includes('.');
+              const isInternalRoute = link.href.startsWith('/') && !isStaticFile;
+              
+              return isInternalRoute ? (
                 <Link
                   key={link.label}
                   to={link.href}
@@ -48,8 +52,8 @@ export const Footer = () => {
                   <PawPrint size={10} className="text-primary/50" />
                   {link.label}
                 </a>
-              )
-            ))}
+              );
+            })}
           </nav>
           
           {/* Social links */}
