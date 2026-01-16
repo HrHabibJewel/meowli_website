@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { PawPrint } from '@/components/PetIcons';
 import meowliLogo from '@/assets/meowli-logo.png';
+import meowliFullLogo from "@/assets/logo_fullname_without_bg.png";
+
 import {
   Accordion,
   AccordionContent,
@@ -91,14 +93,17 @@ const FAQ = () => {
       />
       <div className="min-h-screen bg-background">
         {/* Header */}
-        <header className="bg-primary/10 py-6">
-          <div className="container px-4">
-            <Link to="/" className="flex items-center gap-2 w-fit">
-              <img src={meowliLogo} alt="Meowli Logo" className="w-10 h-10" />
-              <span className="text-2xl font-bold text-primary">Meowli</span>
-            </Link>
-          </div>
-        </header>
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <nav className="container mx-auto px-4 py-4 flex items-center justify-between" aria-label="Main navigation">
+          <Link to="/" className="flex items-center gap-2" aria-label="Meowli Home">
+            {/* <img src={meowliLogo} alt="Meowli Logo" className="w-8 h-8" /> */}
+            <img src={meowliFullLogo} alt="Meowli Logo" className="w-38 h-8" />
+          </Link>
+          <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            ← Back to Home
+          </Link>
+        </nav>
+      </header>
 
         {/* Main Content */}
         <main className="container px-4 py-12">

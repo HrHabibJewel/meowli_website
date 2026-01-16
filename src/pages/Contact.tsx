@@ -8,6 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import meowliLogo from "@/assets/meowli-logo.png";
+import meowliFullLogo from "@/assets/logo_fullname_without_bg.png";
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -51,15 +53,14 @@ const Contact = () => {
       />
       <div className="min-h-screen bg-gradient-to-b from-background via-accent/20 to-background">
       {/* Header */}
-      <header className="container mx-auto px-4 py-6">
-        <nav aria-label="Main navigation">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-            aria-label="Go back to home page"
-          >
-            <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-            Back to Home
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+        <nav className="container mx-auto px-4 py-4 flex items-center justify-between" aria-label="Main navigation">
+          <Link to="/" className="flex items-center gap-2" aria-label="Meowli Home">
+            {/* <img src={meowliLogo} alt="Meowli Logo" className="w-8 h-8" /> */}
+            <img src={meowliFullLogo} alt="Meowli Logo" className="w-38 h-8" />
+          </Link>
+          <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            ← Back to Home
           </Link>
         </nav>
       </header>
@@ -181,8 +182,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email Us</h3>
-                    <a href="mailto:support@meowli.app" className="text-muted-foreground hover:text-primary transition-colors block">support@meowli.app</a>
-                    <a href="mailto:hello@meowli.app" className="text-muted-foreground hover:text-primary transition-colors block">hello@meowli.app</a>
+                    <a href="mailto:info@meowli.app" className="text-muted-foreground hover:text-primary transition-colors block">info@meowli.app</a>
+                    <a href="mailto:info@meowli.app" className="text-muted-foreground hover:text-primary transition-colors block">info@meowli.app</a>
                   </div>
                 </div>
 

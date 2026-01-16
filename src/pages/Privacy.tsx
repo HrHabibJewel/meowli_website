@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import meowliLogo from "@/assets/meowli-logo.png";
+import meowliFullLogo from "@/assets/logo_fullname_without_bg.png";
 
 const Privacy = () => {
   return (
@@ -16,8 +17,8 @@ const Privacy = () => {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between" aria-label="Main navigation">
           <Link to="/" className="flex items-center gap-2" aria-label="Meowli Home">
-            <img src={meowliLogo} alt="Meowli Logo" className="w-8 h-8" />
-            <span className="font-display text-2xl font-bold text-primary">Meowli</span>
+            {/* <img src={meowliLogo} alt="Meowli Logo" className="w-8 h-8" /> */}
+            <img src={meowliFullLogo} alt="Meowli Logo" className="w-38 h-8" />
           </Link>
           <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
             ← Back to Home
