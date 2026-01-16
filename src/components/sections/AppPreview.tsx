@@ -59,7 +59,7 @@ export const AppPreview = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative hidden sm:block"
+              className="relative  sm:block"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-coral/20 rounded-[2.5rem] blur-xl" />
@@ -97,7 +97,7 @@ export const AppPreview = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative hidden sm:block"
+              className="relative  sm:block"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-coral/20 rounded-[2.5rem] blur-xl" />
