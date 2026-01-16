@@ -222,7 +222,7 @@ const Privacy = () => {
 
       {/* Footer */}
       <footer className="py-8 text-center text-muted-foreground">
-        <p className="text-sm">© 2024 Meowli. All rights reserved.</p>
+        <p className="text-sm">© 2026 Meowli. All rights reserved.</p>
       </footer>
     </div>
     </>

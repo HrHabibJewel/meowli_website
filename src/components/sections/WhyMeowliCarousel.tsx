@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import carouselShare from '@/assets/carousel-share.png';
-import carouselMatch from '@/assets/carousel-match.png';
-import carouselHealth from '@/assets/carousel-health.png';
+import carouselMatch from '@/assets/match.png';
+import carouselHealth from '@/assets/vets.png';
 
 const slides = [
   {
@@ -26,7 +26,7 @@ const slides = [
     title: 'Find nearby vets',
     description: 'Discover trusted veterinarians near you and request appointments with ease.',
     image: carouselHealth,
-    bgClass: 'bg-sky',
+    bgClass: 'bg-peach-light',
   },
 ];
 

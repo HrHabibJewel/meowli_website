@@ -170,7 +170,7 @@ const FAQ = () => {
         <footer className="bg-foreground py-8 mt-12">
           <div className="container px-4 text-center">
             <p className="text-primary-foreground/50 text-sm">
-              © 2024 Meowli. Made with 💕 for pets and their humans.
+              © 2026 Meowli. Made with 💕 for pets and their humans.
             </p>
           </div>
         </footer>

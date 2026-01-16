@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import appScreen1 from '@/assets/app-screen-1.png';
-import appScreen2 from '@/assets/app-screen-2.png';
-import appScreen3 from '@/assets/app-screen-3.png';
+import appScreen1 from '@/assets/appscreen1.png';
+import appScreen2 from '@/assets/appscreen2.png';
+import appScreen3 from '@/assets/appscreen3.png';
 import { HeartBubble } from '@/components/PetIcons';
 
 export const AppPreview = () => {

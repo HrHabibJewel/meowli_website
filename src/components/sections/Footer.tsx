@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { PawPrint } from '@/components/PetIcons';
 import { Twitter, Instagram, Facebook } from 'lucide-react';
 import meowliLogo from '@/assets/meowli-logo.png';
+import meowliFullLogo from '@/assets/logo_fullname_without_bg.png';
 
 const footerLinks = [
   { label: 'Terms of Service', href: '/terms' },
@@ -24,8 +25,9 @@ export const Footer = () => {
         <div className="flex flex-col items-center">
           {/* Logo */}
           <div className="flex items-center gap-2 mb-6">
-            <img src={meowliLogo} alt="Meowli Logo" className="w-10 h-10" />
-            <span className="text-2xl font-bold text-primary-foreground">Meowli</span>
+            {/* <img src={meowliLogo} alt="Meowli Logo" className="w-20 h-20" /> */}
+            {/* <span className="text-2xl font-bold text-primary-foreground">Meowli</span> */}
+            <img src={meowliFullLogo} alt="Meowli Logo" width={350} />
           </div>
           
           {/* Links */}
@@ -72,7 +74,7 @@ export const Footer = () => {
           
           {/* Copyright */}
           <p className="text-primary-foreground/50 text-sm text-center">
-            © 2024 Meowli. Made with 💕 for pets and their humans.
+            © 2026 Meowli. Made with 💕 for pets and their humans. Pawdates, Vets & Shopping — Meowli Has It All 🐾
           </p>
         </div>
       </div>

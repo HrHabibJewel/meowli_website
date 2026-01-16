@@ -16,11 +16,12 @@ const Index = () => {
         keywords="pet app, cat social network, dog matchmaking, pet health tracker, vet finder, pet community, pet social media, cat app, dog app, pet care app, pet playdate, pet friends"
       />
       <main className="overflow-x-hidden">
+        
         <header>
           <HeroSection />
         </header>
         <WhyMeowliCarousel />
-        <HowItWorks />
+        {/* <HowItWorks /> */}
         <AppPreview />
         <FeatureHighlights />
         <Testimonials />

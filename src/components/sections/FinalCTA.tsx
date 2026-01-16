@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Apple, PlayCircle } from 'lucide-react';
 import { FloatingPaws, PawPrint } from '@/components/PetIcons';
-import ctaKitten from '@/assets/cta-kitten.png';
+import ctaKitten from '@/assets/cta-kitten.jpg';
 
 export const FinalCTA = () => {
   return (
@@ -38,6 +38,12 @@ export const FinalCTA = () => {
               className="w-full md:w-1/2 p-8 md:p-12 text-center md:text-left"
             >
               <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+                 <span className="gap-2 mb-4 items-center justify-center px-4 py-2 rounded-full bg-coral/10 text-coral text-sm font-semibold border border-coral/20">
+              Coming Soon!
+            </span>
+              </div>
+             
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
                 <PawPrint size={20} className="text-primary" />
                 <span className="text-sm font-medium text-primary">Join 50,000+ pet lovers</span>
               </div>
@@ -59,6 +65,7 @@ export const FinalCTA = () => {
                   Play Store
                 </Button>
               </div>
+              
             </motion.div>
           </div>
         </div>

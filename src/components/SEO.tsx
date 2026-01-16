@@ -12,11 +12,11 @@ interface SEOProps {
 
 const defaultSEO = {
   siteName: 'Meowli',
-  title: 'Meowli - The App for Pets and Their Humans | Pet Social Network & Health Tracker',
+  title: 'Meowli - 🐾 Pawdates, Vets & Shopping — Meowli Has It All 🐾 Everything your pet needs, in one loving community.',
   description: 'Join 50,000+ pet lovers on Meowli! Find perfect playmates for your furry friend, track health records, discover nearby vets, and share adorable moments. Download free today!',
-  keywords: 'pet app, cat social network, dog matchmaking, pet health tracker, vet finder, pet community, pet social media, cat app, dog app, pet care app',
+  keywords: 'pet app, cat social network, pet matchmaking, pet health tracker, vet finder, pet community, pet social media, cat app, dog app, pet care app',
   siteUrl: 'https://meowli.app',
-  ogImage: 'https://lovable.dev/opengraph-image-p98pqg.png',
+  ogImage: '@/assets/meowli-logo.png',
 };
 
 export const SEO = ({
