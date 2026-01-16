@@ -25,7 +25,7 @@ export const FinalCTA = () => {
               <img
                 src={ctaKitten}
                 alt="Adorable sleeping kitten"
-                className="w-full h-64 md:h-full object-cover"
+                className="w-full h-80 md:h-full object-cover object-bottom"
               />
             </motion.div>
             
