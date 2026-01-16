@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, MapPin, Camera } from 'lucide-react';
+import { Heart, MapPin, Camera, Store } from 'lucide-react';
 import { PawPrint } from '@/components/PetIcons';
 
 const features = [
@@ -7,19 +7,29 @@ const features = [
     icon: Heart,
     title: 'Pet Matchmaking',
     description: 'Find the perfect playdate for your furry friend with smart compatibility matching.',
-    color: 'bg-blush text-coral',
+    color: 'bg-coral/20 text-coral',
+    bg: 'bg-coral/10'
   },
   {
     icon: MapPin,
     title: 'Nearby Vet Finder',
     description: 'Discover top-rated veterinarians and pet services in your area.',
     color: 'bg-sky text-accent-foreground',
+    bg: 'bg-coral/20'
   },
   {
     icon: Camera,
     title: 'Social Feed',
     description: 'Share adorable moments and connect with a community of pet lovers.',
+    color: 'bg-peach-light/20 text-primary',
+    bg: 'bg-coral/30'
+  },
+  {
+    icon: Store,
+    title: 'Pet Store',
+    description: 'Premium food, toys, and accessories delivered to your door. Curated products for every type of pet.',
     color: 'bg-peach-light text-primary',
+    bg: 'bg-peach-light'
   },
 ];
 
@@ -46,7 +56,7 @@ export const FeatureHighlights = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -56,7 +66,7 @@ export const FeatureHighlights = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-card rounded-3xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 h-full group-hover:-translate-y-1">
+              <div className={`${feature.bg} rounded-3xl border-2 p-6 shadow-card backdrop-blur-sm hover:shadow-medium transition-all duration-300 h-full group-hover:-translate-y-1`}>
                 <div className={`w-14 h-14 rounded-2xl ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-7 h-7" />
                 </div>

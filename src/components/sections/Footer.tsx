@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { PawPrint } from '@/components/PetIcons';
-import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { Twitter, Instagram, Facebook, Target } from 'lucide-react';
 import meowliLogo from '@/assets/meowli-logo.png';
 import meowliFullLogo from '@/assets/logo_fullname_without_bg.png';
 
 const footerLinks = [
-  { label: 'Terms of Service', href: '/terms' },
+  { label: 'Terms of Service', href: '/terms'  },
   { label: 'Privacy Policy', href: '/privacy' },
   { label: 'Contact Us', href: '/contact' },
   { label: 'Sitemap', href: '/sitemap.xml' },
@@ -41,6 +41,7 @@ export const Footer = () => {
                   key={link.label}
                   to={link.href}
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors flex items-center gap-1 text-sm"
+                  target="_blank"
                 >
                   <PawPrint size={10} className="text-primary/50" />
                   {link.label}
