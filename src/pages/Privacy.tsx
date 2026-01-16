@@ -152,7 +152,7 @@ const Privacy = () => {
                 <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
               </ul>
               <p className="mt-4">
-                To exercise these rights, contact us at privacy@meowli.com.bd
+                To exercise these rights, contact us at info@meowli.app
               </p>
             </section>
 
@@ -205,7 +205,7 @@ const Privacy = () => {
               <p className="mt-4">
                 <strong>Data Protection Officer</strong><br />
                 Meowli Bangladesh<br />
-                Email: privacy@meowli.com.bd<br />
+                Email: info@meowli.app<br />
                 Address: Dhaka, Bangladesh<br />
                 Phone: +880-XXX-XXXXXXX
               </p>

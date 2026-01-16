@@ -13,9 +13,9 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Twitter, href: 'https://facebook.com/meowliapp', label: 'Twitter' },
+  { icon: Instagram, href: 'https://facebook.com/meowliapp', label: 'Instagram' },
+  { icon: Facebook, href: 'https://facebook.com/meowliapp', label: 'Facebook' },
 ];
 
 export const Footer = () => {
@@ -66,6 +66,7 @@ export const Footer = () => {
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
+                target='_blank'
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center text-primary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <social.icon className="w-5 h-5" />
