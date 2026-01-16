@@ -146,7 +146,7 @@ const Terms = () => {
               </p>
               <p className="mt-4">
                 <strong>Meowli Bangladesh</strong><br />
-                Email: legal@meowli.com.bd<br />
+                Email: info@meowli.app<br />
                 Address: Dhaka, Bangladesh<br />
                 Phone: +880-XXX-XXXXXXX
               </p>
